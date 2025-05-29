@@ -3,7 +3,7 @@
 
 // --- Configurazione Wi-Fi ---
 const char* ssid = "Alex il Leone";         // SOSTITUISCI CON IL NOME DELLA TUA RETE WI-FI
-const char* password = "NapoliColera"; // SOSTITUISCI CON LA PASSWORD DELLA TUA WI-FI
+const char* password = "NapoliColera123"; // SOSTITUISCI CON LA PASSWORD DELLA TUA WI-FI
 // --- Fine Configurazione Wi-Fi ---
 
 WebServer server(80); // Crea un'istanza del server sulla porta 80

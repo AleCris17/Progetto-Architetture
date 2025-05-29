@@ -9,10 +9,8 @@ import requests # Per inviare richieste HTTP
 rtsp_url = "rtsp://localhost:8554/webcam_stream"
 
 # URL dell'endpoint sull'ESP32 che riceverà il frame
-# !!! IMPORTANTE: SOSTITUISCI <IP_ESP32> CON L'INDIRIZZO IP REALE DEL TUO ESP32 !!!
-# !!! Assicurati anche che l'endpoint (es. '/upload_frame') e la porta (se non è 80) corrispondano a quelli del server sull'ESP32 !!!
 esp32_target_url = "http://192.168.217.67:80/upload_frame"
-# Esempio con porta diversa: esp32_target_url = "http://<IP_ESP32>:8080/upload_frame"
+
 
 # Qualità della compressione JPEG (0-100, più alto è meglio ma più grande il file)
 jpeg_quality = 85
