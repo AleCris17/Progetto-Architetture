@@ -8,7 +8,6 @@ import sys
 rtsp_url = "rtsp://localhost:8554/webcam_stream"
 
 # Dimensioni fisse per l'immagine di output
-# Imposta questi valori a una risoluzione MAGGIORE di quella originale per ingrandire
 new_width = 1280
 new_height = 960
 # --- Fine Configurazione ---
@@ -53,8 +52,6 @@ while not stop_program:
     if not ret:
         print("Impossibile leggere il frame dallo stream. Fine o problema di connessione.")
         stop_program = True # Imposta il flag per garantire la pulizia finale
-        # Non c'è bisogno di break qui, il loop si fermerà alla prossima iterazione
-        # grazie alla condizione `while not stop_program:`
         continue # Salta il resto del loop in questa iterazione
 
     # --- Elaborazione del Frame ---
@@ -72,11 +69,8 @@ while not stop_program:
     cv2.waitKey(1)
     # --- Fine Mantiene la finestra aggiornata ---
 
-    # La parte che controllava il tasto 'q' è stata rimossa.
-
-
 # --- Pulizia ---
-# Queste righe vengono eseguite una volta che il loop `while not stop_program:` termina
+
 # Rilascia la risorsa di cattura video
 cap.release()
 # Chiude tutte le finestre di OpenCV aperte
